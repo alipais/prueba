@@ -3,6 +3,6 @@ Alipais.mysql.pythonanywhere-services.com
 
 Username:  Alipais
 
-Alipais$favorite_cake
+base de daros: Alipais$favorite_cake
 
-contraseña   grupo102024
+contraseña:   grupo102024

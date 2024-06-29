@@ -3,7 +3,7 @@ from flask_cors import CORS
 from componentes.config_db import conexion
 
 app = Flask(__name__)
-CORS(app)  # Permitir CORS para todas las rutas
+CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5500"}})  # Permitir CORS para las rutas que empiezan con /api/
 
 # Conexión a la base de datos
 def obtener_conexion():
@@ -19,7 +19,7 @@ def obtener_conexion():
     return con, cursor
 
 # Crear un nuevo usuario
-@app.route('Alipais.pythonanywhere-services.com/api-favorite_cake/usuarios', methods=['POST'])
+@app.route('/api-favorite_cake/usuarios', methods=['POST'])
 def crear_usuario():
     try:
         con, cursor = obtener_conexion()
